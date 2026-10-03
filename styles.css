@@ -1,0 +1,44 @@
+/* styles.css — basic responsive styles for Book Tattoo */
+:root{
+  --bg:#0f0f10; --muted:#9aa0a6; --accent:#d84b4b; --accent-2:#f2c94c; --surface:#0f1720; --card:#111214; --container:1100px; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color-scheme: dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#0b0b0c 0%, #111214 100%);color:#fff;line-height:1.45}
+.container{max-width:var(--container);margin:0 auto;padding:1rem}
+.header{background:transparent;padding:.6rem 0;position:sticky;top:0;z-index:40}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit}
+.logo-img{width:48px;height:48px;border-radius:6px;object-fit:cover}
+.logo-text{font-weight:700;letter-spacing:1px}
+.nav-toggle{display:none;background:none;border:0;padding:.4rem;cursor:pointer}
+.nav-links{list-style:none;display:flex;gap:1rem;margin:0;padding:0}
+.nav-links a{color:inherit;text-decoration:none;padding:.4rem .6rem;border-radius:6px}
+.btn-nav{background:var(--accent);color:#fff;padding:.45rem .7rem}
+.hero{padding:4rem 0;position:relative;min-height:60vh;display:flex;align-items:center}
+.hero-overlay{position:absolute;inset:0;opacity:.2}
+.hero-content{position:relative;text-align:center}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:4rem;margin:.4rem 0}
+.hero p{opacity:.9}
+.section{padding:3rem 0}
+.section-header h2{font-size:1.75rem;margin:0}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.service-card{background:rgba(255,255,255,0.02);padding:1rem;border-radius:10px}
+.artists-grid, .gallery-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:1rem}
+.artist-card{background:rgba(255,255,255,0.02);padding:1rem;border-radius:10px;text-align:center}
+.artist-card img{width:100%;height:220px;object-fit:cover;border-radius:8px}
+.gallery-item{background:transparent;border:0;padding:0}
+.gallery-item img{width:100%;height:220px;object-fit:cover;border-radius:8px}
+.booking-form{max-width:720px;margin:0 auto;display:grid;gap:.8rem}
+.booking-form label{display:block}
+.booking-form input, .booking-form textarea, .booking-form select{width:100%;padding:.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:8px;border:0;cursor:pointer}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.08)}
+.site-footer{padding:1rem 0;text-align:center;border-top:1px solid rgba(255,255,255,0.03);margin-top:2rem}
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+@media (max-width:800px){
+  .nav-toggle{display:inline-flex}
+  .nav-links{position:fixed;right:0;top:60px;background:#071018;width:240px;height:calc(100% - 60px);flex-direction:column;padding:1rem;transform:translateX(100%);transition:transform .25s}
+  .nav-links.show{transform:translateX(0)}
+  .hero h1{font-size:2.4rem}
+}
