@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Book Tattoo | Premium Body Art Studio</title>
+  <meta name="description" content="Book Tattoo - Premium custom tattoos, body art & professional booking. Book your next ink session today.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Navigation -->
+  <header class="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" class="logo">
+        <img src="logo.jpg" alt="Book Tattoo Logo" class="logo-img">
+        <span class="logo-text">BOOK <span>TATTOO</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" id="navToggle" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#artists">Artists</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#booking" class="btn-nav">Book Now</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main id="main">
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <img src="logo.jpg" alt="Book Tattoo" class="hero-logo">
+      <h1>BOOK TATTOO</h1>
+      <p class="hero-tagline">Premium Custom Body Art & Professional Ink</p>
+      <p class="hero-sub">Where art meets skin. Book your next masterpiece today.</p>
+      <div class="hero-cta">
+        <a href="#booking" class="btn btn-primary">Book a Session</a>
+        <a href="#gallery" class="btn btn-outline">View Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section services">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Services</h2>
+        <p>From fine line to full sleeves — we do it all with precision and passion.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-icon">✦</div>
+          <h3>Custom Designs</h3>
+          <p>One-of-a-kind tattoos designed exclusively for you. Bring your idea or let our artists create something original.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">◈</div>
+          <h3>Black & Grey</h3>
+          <p>Timeless realism, portraits, and intricate shading that ages beautifully on the skin.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">◉</div>
+          <h3>Color Work</h3>
+          <p>Vibrant, saturated color tattoos that pop — neo-traditional, Japanese, and modern styles.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">◆</div>
+          <h3>Cover-Ups</h3>
+          <p>Transform old ink into something new. Expert cover-up and rework specialists.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">◎</div>
+          <h3>Fine Line & Minimal</h3>
+          <p>Delicate single-needle work, geometric patterns, and elegant minimalist designs.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">✦</div>
+          <h3>Large Scale</h3>
+          <p>Full sleeves, back pieces, and large compositions planned and executed over multiple sessions.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Artists -->
+  <section id="artists" class="section artists">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Artists</h2>
+        <p>Meet the talented hands behind every piece of art.</p>
+      </div>
+      <div class="artists-grid">
+        <article class="artist-card">
+          <img src="artist1.jpg" alt="Artist 1" loading="lazy">
+          <h3>Alex Rivera</h3>
+          <p>Specialist in fine line and botanical pieces.</p>
+        </article>
+        <article class="artist-card">
+          <img src="artist2.jpg" alt="Artist 2" loading="lazy">
+          <h3>Riley Park</h3>
+          <p>Black & grey realism and portrait work.</p>
+        </article>
+        <article class="artist-card">
+          <img src="artist3.jpg" alt="Artist 3" loading="lazy">
+          <h3>Morgan Lee</h3>
+          <p>Neo-traditional color and bold compositions.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="section gallery">
+    <div class="container">
+      <div class="section-header">
+        <h2>Gallery</h2>
+        <p>Recent work and client favorites.</p>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <button class="gallery-item" data-src="gallery1.jpg"><img src="gallery1-thumb.jpg" alt="Gallery image 1"></button>
+        <button class="gallery-item" data-src="gallery2.jpg"><img src="gallery2-thumb.jpg" alt="Gallery image 2"></button>
+        <button class="gallery-item" data-src="gallery3.jpg"><img src="gallery3-thumb.jpg" alt="Gallery image 3"></button>
+        <button class="gallery-item" data-src="gallery4.jpg"><img src="gallery4-thumb.jpg" alt="Gallery image 4"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section id="booking" class="section booking">
+    <div class="container">
+      <div class="section-header">
+        <h2>Book a Session</h2>
+        <p>Use the form below to request a booking. We'll follow up to confirm details.</p>
+      </div>
+
+      <!-- Netlify Forms: data-netlify="true" -->
+      <form name="booking" method="POST" data-netlify="true" id="bookingForm" class="booking-form">
+        <input type="hidden" name="form-name" value="booking">
+        <label>Full name
+          <input type="text" name="name" required>
+        </label>
+        <label>Email
+          <input type="email" name="email" required>
+        </label>
+        <label>Phone
+          <input type="tel" name="phone">
+        </label>
+        <label>Preferred artist
+          <select name="artist">
+            <option value="Any">Any</option>
+            <option value="Alex Rivera">Alex Rivera</option>
+            <option value="Riley Park">Riley Park</option>
+            <option value="Morgan Lee">Morgan Lee</option>
+          </select>
+        </label>
+        <label>Preferred date
+          <input type="date" name="date">
+        </label>
+        <label>Details
+          <textarea name="message" rows="4"></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary">Send Booking Request</button>
+        <p class="form-status" id="formStatus" aria-live="polite"></p>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contact</h2>
+        <p>Visit our studio or send a message.</p>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <h3>Studio</h3>
+          <p>123 Ink Lane<br>City, State ZIP</p>
+          <p><strong>Hours:</strong> Tue–Sat, 11am–7pm</p>
+        </div>
+        <div>
+          <h3>Get in touch</h3>
+          <p>Email: <a href="mailto:hello@booktattoo.example">hello@booktattoo.example</a></p>
+          <p>Phone: <a href="tel:+1234567890">(123) 456-7890</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Book Tattoo — All rights reserved.</p>
+      <p><a href="/admin/">Admin</a></p>
+    </div>
+  </footer>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
