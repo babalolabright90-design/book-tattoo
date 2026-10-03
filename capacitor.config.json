@@ -1,0 +1,9 @@
+{
+  "appId": "com.booktattoo.app",
+  "appName": "Book Tattoo",
+  "webDir": ".",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}
