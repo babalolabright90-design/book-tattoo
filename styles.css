@@ -1,44 +1,69 @@
-/* styles.css — basic responsive styles for Book Tattoo */
+/* styles.css — refreshed theme and refined styles for Book Tattoo */
 :root{
-  --bg:#0f0f10; --muted:#9aa0a6; --accent:#d84b4b; --accent-2:#f2c94c; --surface:#0f1720; --card:#111214; --container:1100px; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color-scheme: dark;
+  --bg:#0b0b0c; --panel:#0f1720; --muted:#9aa0a6; --accent:#e24b4b; --accent-2:#f2c94c; --glass:rgba(255,255,255,0.04); --container:1100px; --radius:12px; --text:#e6eef6; --accent-strong:#ff5959;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 *{box-sizing:border-box}
-body{margin:0;background:linear-gradient(180deg,#0b0b0c 0%, #111214 100%);color:#fff;line-height:1.45}
+html,body{height:100%}
+body{margin:0;background:linear-gradient(180deg,#070708 0%, #0b0b0c 100%);color:var(--text);line-height:1.5;-webkit-font-smoothing:antialiased}
 .container{max-width:var(--container);margin:0 auto;padding:1rem}
-.header{background:transparent;padding:.6rem 0;position:sticky;top:0;z-index:40}
-.nav{display:flex;align-items:center;justify-content:space-between}
+a{color:inherit}
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.header{background:transparent;padding:.8rem 0;position:sticky;top:0;z-index:60}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem}
 .logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit}
-.logo-img{width:48px;height:48px;border-radius:6px;object-fit:cover}
+.logo-img{width:56px;height:56px;border-radius:8px;object-fit:cover;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
 .logo-text{font-weight:700;letter-spacing:1px}
 .nav-toggle{display:none;background:none;border:0;padding:.4rem;cursor:pointer}
-.nav-links{list-style:none;display:flex;gap:1rem;margin:0;padding:0}
-.nav-links a{color:inherit;text-decoration:none;padding:.4rem .6rem;border-radius:6px}
-.btn-nav{background:var(--accent);color:#fff;padding:.45rem .7rem}
-.hero{padding:4rem 0;position:relative;min-height:60vh;display:flex;align-items:center}
-.hero-overlay{position:absolute;inset:0;opacity:.2}
-.hero-content{position:relative;text-align:center}
-.hero h1{font-family:'Bebas Neue',sans-serif;font-size:4rem;margin:.4rem 0}
-.hero p{opacity:.9}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;opacity:.85}
+.nav-links{list-style:none;display:flex;gap:0.5rem;margin:0;padding:0;align-items:center}
+.nav-links a{color:var(--text);text-decoration:none;padding:.4rem .7rem;border-radius:8px;transition:background .18s, transform .12s}
+.nav-links a:hover{background:var(--glass);transform:translateY(-2px)}
+.btn-nav{background:linear-gradient(90deg,var(--accent-strong),var(--accent));color:#fff;padding:.45rem .9rem;border-radius:10px;font-weight:600}
+.hero{padding:5rem 0;position:relative;min-height:64vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.7));pointer-events:none}
+.hero-content{position:relative;text-align:center;padding:1rem;z-index:2}
+.hero-logo{width:96px;height:96px;border-radius:10px;object-fit:cover;display:inline-block;margin-bottom:.6rem}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:4.25rem;margin:.2rem 0;letter-spacing:2px}
+.hero p{opacity:.95;margin:.4rem 0}
+.hero-cta{display:flex;gap:.75rem;justify-content:center;margin-top:1rem}
+.btn{display:inline-block;padding:.65rem 1rem;border-radius:10px;border:0;cursor:pointer}
+.btn-primary{background:linear-gradient(90deg,var(--accent-strong),var(--accent));color:#fff;box-shadow:0 8px 24px rgba(226,75,75,0.12)}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)}
 .section{padding:3rem 0}
-.section-header h2{font-size:1.75rem;margin:0}
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
-.service-card{background:rgba(255,255,255,0.02);padding:1rem;border-radius:10px}
-.artists-grid, .gallery-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:1rem}
-.artist-card{background:rgba(255,255,255,0.02);padding:1rem;border-radius:10px;text-align:center}
-.artist-card img{width:100%;height:220px;object-fit:cover;border-radius:8px}
-.gallery-item{background:transparent;border:0;padding:0}
-.gallery-item img{width:100%;height:220px;object-fit:cover;border-radius:8px}
-.booking-form{max-width:720px;margin:0 auto;display:grid;gap:.8rem}
-.booking-form label{display:block}
-.booking-form input, .booking-form textarea, .booking-form select{width:100%;padding:.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
-.btn{display:inline-block;padding:.6rem 1rem;border-radius:8px;border:0;cursor:pointer}
-.btn-primary{background:var(--accent);color:#fff}
-.btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.08)}
-.site-footer{padding:1rem 0;text-align:center;border-top:1px solid rgba(255,255,255,0.03);margin-top:2rem}
-.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.section-header h2{font-size:1.8rem;margin:0}
+.section-header p{color:var(--muted);margin-top:.4rem}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1.25rem}
+.service-card{background:var(--panel);padding:1.25rem;border-radius:var(--radius);transition:transform .18s, box-shadow .18s}
+.service-card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+.service-icon{font-size:1.4rem;color:var(--accent-2);margin-bottom:.5rem}
+.artists-grid, .gallery-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:1rem}
+.artist-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:1rem;border-radius:12px;text-align:center}
+.artist-card img{width:100%;height:220px;object-fit:cover;border-radius:10px}
+.artist-card h3{margin:.5rem 0 0}
+.gallery-grid{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.gallery-item{background:transparent;border:0;padding:0;cursor:pointer;border-radius:10px;overflow:hidden}
+.gallery-item img{width:100%;height:220px;object-fit:cover;border-radius:10px;display:block;transition:transform .25s}
+.gallery-item:hover img{transform:scale(1.04)}
+/* lightbox */
+.lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,10,0.82);z-index:120}
+.lightbox.show{display:flex}
+.lightbox img{max-width:92%;max-height:86%;border-radius:10px;box-shadow:0 12px 48px rgba(0,0,0,0.6)}
+.lightbox .close{position:absolute;top:28px;right:28px;background:rgba(0,0,0,0.45);border:0;color:#fff;padding:.5rem .6rem;border-radius:8px}
+.booking-form{max-width:720px;margin:0 auto;display:grid;gap:.9rem}
+.booking-form label{display:block;color:var(--muted);font-size:.95rem}
+.booking-form input, .booking-form textarea, .booking-form select{width:100%;padding:.7rem;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
+.form-status{color:var(--accent-2);font-weight:600;margin-top:.4rem}
+.site-footer{padding:1.5rem 0;text-align:center;border-top:1px solid rgba(255,255,255,0.03);margin-top:2rem;color:var(--muted)}
+.footer-links{display:flex;gap:1rem;justify-content:center;margin-top:.5rem}
+/* small screens */
+@media (max-width:900px){
+  .hero h1{font-size:2.6rem}
+  .logo-img{width:48px;height:48px}
+}
 @media (max-width:800px){
   .nav-toggle{display:inline-flex}
-  .nav-links{position:fixed;right:0;top:60px;background:#071018;width:240px;height:calc(100% - 60px);flex-direction:column;padding:1rem;transform:translateX(100%);transition:transform .25s}
+  .nav-links{position:fixed;right:0;top:64px;background:linear-gradient(180deg,#071018, #07121a);width:260px;height:calc(100% - 64px);flex-direction:column;padding:1rem;transform:translateX(100%);transition:transform .25s;box-shadow:-12px 0 30px rgba(0,0,0,0.6)}
   .nav-links.show{transform:translateX(0)}
-  .hero h1{font-size:2.4rem}
+  .nav-links a{padding:.8rem 1rem}
 }
